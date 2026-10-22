@@ -15,7 +15,7 @@ async function registerUser(req,res){
     }
 
 
-    const user = new userModel({
+    const user = await new userModel({
         username, name, password
     })
     const token = jwt.sign({
